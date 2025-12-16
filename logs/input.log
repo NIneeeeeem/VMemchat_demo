@@ -1,0 +1,19 @@
+/save /nvme-ssd2/wxc/Test/Task2/imgs/000000000724.jpg
+/save /nvme-ssd2/wxc/Test/Task2/imgs/000000000776.jpg
+/save /nvme-ssd2/wxc/Test/Task2/imgs/000000000785.jpg
+/save /nvme-ssd2/wxc/Test/Task2/imgs/000000000802.jpg
+/save /nvme-ssd2/wxc/Test/Task2/imgs/000000000872.jpg
+/save /nvme-ssd2/wxc/Test/Task2/imgs/000000001503.jpg
+/search_text some trees
+/search_text a brown bear
+/search_text I want to find a laptop
+/save /nvme-ssd2/wxc/Test/Task2/imgs/000000001584.jpg
+/save /nvme-ssd2/wxc/Test/Task2/imgs/000000005477.jpg
+/search_image /nvme-ssd2/wxc/Test/Task2/query_images/4765_human.png
+/save /nvme-ssd2/wxc/Test/Task2/imgs/000000003553.jpg
+/search_image /nvme-ssd2/wxc/Test/Task2/query_images/3553_shuos.png
+/search_image /nvme-ssd2/wxc/Test/Task2/query_images/2532_human.png
+/save /nvme-ssd2/wxc/Test/Task2/imgs/000000002532.jpg
+/search_image /nvme-ssd2/wxc/Test/Task2/query_images/2532_human.png
+/search_text Actually, I cant find my red jacket
+quit

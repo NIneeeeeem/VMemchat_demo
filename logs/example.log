@@ -1,0 +1,342 @@
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.27it/s]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.28it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.30it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.49it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.41it/s]
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+
+Commands: 
+  /save <img_path> [Note]      task 2. 保存图像语义到 mem 
+  /search_text <query>         task 3. 文本检索
+  /search_image <img_path>     task 4. 图像检索
+  others                       chat 
+  /exit                        exit 
+
+You> 读取成功：
+  image   : /nvme-ssd2/wxc/Test/Task2/imgs/000000000285.jpg
+  caption : A close-up of a brown bear with a gentle expression sitting in a grassy field.
+  objects : bear, grass
+You> 读取成功：
+  image   : /nvme-ssd2/wxc/Test/Task2/imgs/000000000724.jpg
+  caption : A red stop sign stands at a street corner under a clear blue sky, surrounded by trees and bushes.
+  objects : stop sign, trees, sky, street, bushes, building, vehicle, street sign, pole
+You> 读取成功：
+  image   : /nvme-ssd2/wxc/Test/Task2/imgs/000000000776.jpg
+  caption : Three teddy bears of varying shades of brown are cuddled together on a textured surface.
+  objects : teddy bear, cushion, fabric
+You> 读取成功：
+  image   : /nvme-ssd2/wxc/Test/Task2/imgs/000000000785.jpg
+  caption : A skier in a red jacket and striped hat glides down a snowy slope with poles in hand.
+  objects : person, skier, ski, ski poles, snow, jacket, hat, gloves, goggles, pants, boots
+You> 读取成功：
+  image   : /nvme-ssd2/wxc/Test/Task2/imgs/000000000802.jpg
+  caption : A kitchen with wooden cabinets, a white stove, and a white refrigerator with a water dispenser.
+  objects : kitchen, cabinets, stove, refrigerator, water dispenser, tile floor, countertop
+You> 读取成功：
+  image   : /nvme-ssd2/wxc/Test/Task2/imgs/000000000872.jpg
+  caption : A baseball player in a white uniform runs past a fielder in a green uniform who is catching a ball.
+  objects : baseball player, fielder, baseball glove, helmet, baseball field, trees, grass, dirt
+You> 读取成功：
+  image   : /nvme-ssd2/wxc/Test/Task2/imgs/000000001503.jpg
+  caption : A white Apple iMac desktop computer setup on a desk with a laptop, keyboard, mouse, speakers, and printer.
+  objects : iMac, laptop, keyboard, mouse, speakers, printer, desk, window, lamp, figurine
+You> 文本检索:  some trees
+Rewrite Query:  some trees
+[final_query] some trees
+------------------------------------------------------------
+Top 1  score=0.5407
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000724.jpg
+  caption  : A red stop sign stands at a street corner under a clear blue sky, surrounded by trees and bushes.
+  objects  : stop sign, trees, sky, street, bushes, building, vehicle, street sign, pole
+Top 2  score=0.4639
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000285.jpg
+  caption  : A close-up of a brown bear with a gentle expression sitting in a grassy field.
+  objects  : bear, grass
+Top 3  score=0.4591
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000776.jpg
+  caption  : Three teddy bears of varying shades of brown are cuddled together on a textured surface.
+  objects  : teddy bear, cushion, fabric
+Top 4  score=0.4277
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000001503.jpg
+  caption  : A white Apple iMac desktop computer setup on a desk with a laptop, keyboard, mouse, speakers, and printer.
+  objects  : iMac, laptop, keyboard, mouse, speakers, printer, desk, window, lamp, figurine
+Top 5  score=0.4113
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000802.jpg
+  caption  : A kitchen with wooden cabinets, a white stove, and a white refrigerator with a water dispenser.
+  objects  : kitchen, cabinets, stove, refrigerator, water dispenser, tile floor, countertop
+You> 文本检索:  a brown bear
+Rewrite Query:  a brown bear
+[final_query] a brown bear
+------------------------------------------------------------
+Top 1  score=0.7260
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000285.jpg
+  caption  : A close-up of a brown bear with a gentle expression sitting in a grassy field.
+  objects  : bear, grass
+Top 2  score=0.5849
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000776.jpg
+  caption  : Three teddy bears of varying shades of brown are cuddled together on a textured surface.
+  objects  : teddy bear, cushion, fabric
+Top 3  score=0.4480
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000001503.jpg
+  caption  : A white Apple iMac desktop computer setup on a desk with a laptop, keyboard, mouse, speakers, and printer.
+  objects  : iMac, laptop, keyboard, mouse, speakers, printer, desk, window, lamp, figurine
+Top 4  score=0.4448
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000724.jpg
+  caption  : A red stop sign stands at a street corner under a clear blue sky, surrounded by trees and bushes.
+  objects  : stop sign, trees, sky, street, bushes, building, vehicle, street sign, pole
+Top 5  score=0.4097
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000802.jpg
+  caption  : A kitchen with wooden cabinets, a white stove, and a white refrigerator with a water dispenser.
+  objects  : kitchen, cabinets, stove, refrigerator, water dispenser, tile floor, countertop
+You> 文本检索:  I want to find a laptop
+Rewrite Query:  a laptop
+[final_query] a laptop
+------------------------------------------------------------
+Top 1  score=0.7060
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000001503.jpg
+  caption  : A white Apple iMac desktop computer setup on a desk with a laptop, keyboard, mouse, speakers, and printer.
+  objects  : iMac, laptop, keyboard, mouse, speakers, printer, desk, window, lamp, figurine
+Top 2  score=0.4685
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000802.jpg
+  caption  : A kitchen with wooden cabinets, a white stove, and a white refrigerator with a water dispenser.
+  objects  : kitchen, cabinets, stove, refrigerator, water dispenser, tile floor, countertop
+Top 3  score=0.3310
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000776.jpg
+  caption  : Three teddy bears of varying shades of brown are cuddled together on a textured surface.
+  objects  : teddy bear, cushion, fabric
+Top 4  score=0.3236
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000285.jpg
+  caption  : A close-up of a brown bear with a gentle expression sitting in a grassy field.
+  objects  : bear, grass
+Top 5  score=0.3162
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000724.jpg
+  caption  : A red stop sign stands at a street corner under a clear blue sky, surrounded by trees and bushes.
+  objects  : stop sign, trees, sky, street, bushes, building, vehicle, street sign, pole
+You> 读取成功：
+  image   : /nvme-ssd2/wxc/Test/Task2/imgs/000000001584.jpg
+  caption : A red double-decker bus with route number 15 to Aldwych is driving down a city street, with other buses and pedestrians visible in the background.
+  objects : double-decker bus, people, buildings, trees, road, license plate, advertising banner, other buses
+You> 读取成功：
+  image   : /nvme-ssd2/wxc/Test/Task2/imgs/000000005477.jpg
+  caption : A golden LOT Polish Airlines Boeing 737 is taxiing on an airport runway under a cloudy sky.
+  objects : airplane, runway, clouds, tail, logo, text, engine, windows, wheels
+You> 正在从查询图片抽取语义并检索视觉记忆...
+[base_query ] A surfer in a yellow shirt and red shorts rides a wave on a surfboard.; 包含实体: surfer、surfboard、ocean、wave
+[final_query] a surfer in a yellow shirt and red shorts riding a wave on a surfboard
+------------------------------------------------------------
+Visual_results
+Top 1  score=0.1664
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000785.jpg
+  caption  : A skier in a red jacket and striped hat glides down a snowy slope with poles in hand.
+  objects  : person, skier, ski, ski poles, snow, jacket, hat, gloves, goggles, pants, boots
+Top 2  score=0.0521
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000001503.jpg
+  caption  : A white Apple iMac desktop computer setup on a desk with a laptop, keyboard, mouse, speakers, and printer.
+  objects  : iMac, laptop, keyboard, mouse, speakers, printer, desk, window, lamp, figurine
+Top 3  score=0.0397
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000005477.jpg
+  caption  : A golden LOT Polish Airlines Boeing 737 is taxiing on an airport runway under a cloudy sky.
+  objects  : airplane, runway, clouds, tail, logo, text, engine, windows, wheels
+Top 4  score=0.0385
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000802.jpg
+  caption  : A kitchen with wooden cabinets, a white stove, and a white refrigerator with a water dispenser.
+  objects  : kitchen, cabinets, stove, refrigerator, water dispenser, tile floor, countertop
+Top 5  score=0.0199
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000285.jpg
+  caption  : A close-up of a brown bear with a gentle expression sitting in a grassy field.
+  objects  : bear, grass
+Language_results
+Top 1  score=0.4666
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000785.jpg
+  caption  : A skier in a red jacket and striped hat glides down a snowy slope with poles in hand.
+  objects  : person, skier, ski, ski poles, snow, jacket, hat, gloves, goggles, pants, boots
+Top 2  score=0.4161
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000724.jpg
+  caption  : A red stop sign stands at a street corner under a clear blue sky, surrounded by trees and bushes.
+  objects  : stop sign, trees, sky, street, bushes, building, vehicle, street sign, pole
+Top 3  score=0.3714
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000872.jpg
+  caption  : A baseball player in a white uniform runs past a fielder in a green uniform who is catching a ball.
+  objects  : baseball player, fielder, baseball glove, helmet, baseball field, trees, grass, dirt
+Top 4  score=0.3277
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000005477.jpg
+  caption  : A golden LOT Polish Airlines Boeing 737 is taxiing on an airport runway under a cloudy sky.
+  objects  : airplane, runway, clouds, tail, logo, text, engine, windows, wheels
+Top 5  score=0.3041
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000285.jpg
+  caption  : A close-up of a brown bear with a gentle expression sitting in a grassy field.
+  objects  : bear, grass
+You> 读取成功：
+  image   : /nvme-ssd2/wxc/Test/Task2/imgs/000000003553.jpg
+  caption : A person wearing Vans shoes is standing on a skateboard atop a wooden platform in a grassy area.
+  objects : person, skateboard, shoes, wooden platform, grass
+You> 正在从查询图片抽取语义并检索视觉记忆...
+[base_query ] A close-up of a person's foot wearing a Vans sneaker on a skateboard.; 包含实体: person、sneaker、skateboard、Vans
+[final_query] a person's foot in a Vans sneaker on a skateboard
+------------------------------------------------------------
+Visual_results
+Top 1  score=0.7023
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000003553.jpg
+  caption  : A person wearing Vans shoes is standing on a skateboard atop a wooden platform in a grassy area.
+  objects  : person, skateboard, shoes, wooden platform, grass
+Top 2  score=0.0231
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000285.jpg
+  caption  : A close-up of a brown bear with a gentle expression sitting in a grassy field.
+  objects  : bear, grass
+Top 3  score=0.0215
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000001503.jpg
+  caption  : A white Apple iMac desktop computer setup on a desk with a laptop, keyboard, mouse, speakers, and printer.
+  objects  : iMac, laptop, keyboard, mouse, speakers, printer, desk, window, lamp, figurine
+Top 4  score=0.0199
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000724.jpg
+  caption  : A red stop sign stands at a street corner under a clear blue sky, surrounded by trees and bushes.
+  objects  : stop sign, trees, sky, street, bushes, building, vehicle, street sign, pole
+Top 5  score=0.0149
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000776.jpg
+  caption  : Three teddy bears of varying shades of brown are cuddled together on a textured surface.
+  objects  : teddy bear, cushion, fabric
+Language_results
+Top 1  score=0.8105
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000003553.jpg
+  caption  : A person wearing Vans shoes is standing on a skateboard atop a wooden platform in a grassy area.
+  objects  : person, skateboard, shoes, wooden platform, grass
+Top 2  score=0.4901
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000785.jpg
+  caption  : A skier in a red jacket and striped hat glides down a snowy slope with poles in hand.
+  objects  : person, skier, ski, ski poles, snow, jacket, hat, gloves, goggles, pants, boots
+Top 3  score=0.3848
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000776.jpg
+  caption  : Three teddy bears of varying shades of brown are cuddled together on a textured surface.
+  objects  : teddy bear, cushion, fabric
+Top 4  score=0.3833
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000724.jpg
+  caption  : A red stop sign stands at a street corner under a clear blue sky, surrounded by trees and bushes.
+  objects  : stop sign, trees, sky, street, bushes, building, vehicle, street sign, pole
+Top 5  score=0.3705
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000285.jpg
+  caption  : A close-up of a brown bear with a gentle expression sitting in a grassy field.
+  objects  : bear, grass
+You> 正在从查询图片抽取语义并检索视觉记忆...
+[base_query ] A person is skiing uphill in a snowy landscape, viewed from behind.; 包含实体: person、ski poles、skis、snow、mountains、sky
+[final_query] a person skiing uphill in a snowy landscape, viewed from behind, with ski poles and skis, mountains and sky visible
+------------------------------------------------------------
+Visual_results
+Top 1  score=0.4955
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000785.jpg
+  caption  : A skier in a red jacket and striped hat glides down a snowy slope with poles in hand.
+  objects  : person, skier, ski, ski poles, snow, jacket, hat, gloves, goggles, pants, boots
+Top 2  score=0.0670
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000776.jpg
+  caption  : Three teddy bears of varying shades of brown are cuddled together on a textured surface.
+  objects  : teddy bear, cushion, fabric
+Top 3  score=0.0507
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000001503.jpg
+  caption  : A white Apple iMac desktop computer setup on a desk with a laptop, keyboard, mouse, speakers, and printer.
+  objects  : iMac, laptop, keyboard, mouse, speakers, printer, desk, window, lamp, figurine
+Top 4  score=0.0478
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000005477.jpg
+  caption  : A golden LOT Polish Airlines Boeing 737 is taxiing on an airport runway under a cloudy sky.
+  objects  : airplane, runway, clouds, tail, logo, text, engine, windows, wheels
+Top 5  score=0.0429
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000724.jpg
+  caption  : A red stop sign stands at a street corner under a clear blue sky, surrounded by trees and bushes.
+  objects  : stop sign, trees, sky, street, bushes, building, vehicle, street sign, pole
+Language_results
+Top 1  score=0.7229
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000785.jpg
+  caption  : A skier in a red jacket and striped hat glides down a snowy slope with poles in hand.
+  objects  : person, skier, ski, ski poles, snow, jacket, hat, gloves, goggles, pants, boots
+Top 2  score=0.5350
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000003553.jpg
+  caption  : A person wearing Vans shoes is standing on a skateboard atop a wooden platform in a grassy area.
+  objects  : person, skateboard, shoes, wooden platform, grass
+Top 3  score=0.4569
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000724.jpg
+  caption  : A red stop sign stands at a street corner under a clear blue sky, surrounded by trees and bushes.
+  objects  : stop sign, trees, sky, street, bushes, building, vehicle, street sign, pole
+Top 4  score=0.4199
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000285.jpg
+  caption  : A close-up of a brown bear with a gentle expression sitting in a grassy field.
+  objects  : bear, grass
+Top 5  score=0.3829
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000001503.jpg
+  caption  : A white Apple iMac desktop computer setup on a desk with a laptop, keyboard, mouse, speakers, and printer.
+  objects  : iMac, laptop, keyboard, mouse, speakers, printer, desk, window, lamp, figurine
+You> 读取成功：
+  image   : /nvme-ssd2/wxc/Test/Task2/imgs/000000002532.jpg
+  caption : A person is cross-country skiing on a snowy mountain trail under a clear blue sky with scattered clouds.
+  objects : person, ski poles, skis, snow, mountains, trees, sky, clouds
+You> 正在从查询图片抽取语义并检索视觉记忆...
+[base_query ] A person is skiing uphill in a snowy mountain landscape.; 包含实体: person、skis、ski poles、snow、mountains、sky
+[final_query] a person skiing uphill in a snowy mountain landscape with skis and ski poles, snow-covered mountains, and sky
+------------------------------------------------------------
+Visual_results
+Top 1  score=0.7985
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000002532.jpg
+  caption  : A person is cross-country skiing on a snowy mountain trail under a clear blue sky with scattered clouds.
+  objects  : person, ski poles, skis, snow, mountains, trees, sky, clouds
+Top 2  score=0.4955
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000785.jpg
+  caption  : A skier in a red jacket and striped hat glides down a snowy slope with poles in hand.
+  objects  : person, skier, ski, ski poles, snow, jacket, hat, gloves, goggles, pants, boots
+Top 3  score=0.0670
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000776.jpg
+  caption  : Three teddy bears of varying shades of brown are cuddled together on a textured surface.
+  objects  : teddy bear, cushion, fabric
+Top 4  score=0.0507
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000001503.jpg
+  caption  : A white Apple iMac desktop computer setup on a desk with a laptop, keyboard, mouse, speakers, and printer.
+  objects  : iMac, laptop, keyboard, mouse, speakers, printer, desk, window, lamp, figurine
+Top 5  score=0.0478
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000005477.jpg
+  caption  : A golden LOT Polish Airlines Boeing 737 is taxiing on an airport runway under a cloudy sky.
+  objects  : airplane, runway, clouds, tail, logo, text, engine, windows, wheels
+Language_results
+Top 1  score=0.8293
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000002532.jpg
+  caption  : A person is cross-country skiing on a snowy mountain trail under a clear blue sky with scattered clouds.
+  objects  : person, ski poles, skis, snow, mountains, trees, sky, clouds
+Top 2  score=0.7449
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000785.jpg
+  caption  : A skier in a red jacket and striped hat glides down a snowy slope with poles in hand.
+  objects  : person, skier, ski, ski poles, snow, jacket, hat, gloves, goggles, pants, boots
+Top 3  score=0.5595
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000003553.jpg
+  caption  : A person wearing Vans shoes is standing on a skateboard atop a wooden platform in a grassy area.
+  objects  : person, skateboard, shoes, wooden platform, grass
+Top 4  score=0.4617
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000724.jpg
+  caption  : A red stop sign stands at a street corner under a clear blue sky, surrounded by trees and bushes.
+  objects  : stop sign, trees, sky, street, bushes, building, vehicle, street sign, pole
+Top 5  score=0.4236
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000285.jpg
+  caption  : A close-up of a brown bear with a gentle expression sitting in a grassy field.
+  objects  : bear, grass
+You> 文本检索:  Actually, I cant find my red jacket
+Rewrite Query:  a red jacket
+[final_query] a red jacket
+------------------------------------------------------------
+Top 1  score=0.5319
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000724.jpg
+  caption  : A red stop sign stands at a street corner under a clear blue sky, surrounded by trees and bushes.
+  objects  : stop sign, trees, sky, street, bushes, building, vehicle, street sign, pole
+Top 2  score=0.5290
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000785.jpg
+  caption  : A skier in a red jacket and striped hat glides down a snowy slope with poles in hand.
+  objects  : person, skier, ski, ski poles, snow, jacket, hat, gloves, goggles, pants, boots
+Top 3  score=0.4158
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000001503.jpg
+  caption  : A white Apple iMac desktop computer setup on a desk with a laptop, keyboard, mouse, speakers, and printer.
+  objects  : iMac, laptop, keyboard, mouse, speakers, printer, desk, window, lamp, figurine
+Top 4  score=0.4084
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000000776.jpg
+  caption  : Three teddy bears of varying shades of brown are cuddled together on a textured surface.
+  objects  : teddy bear, cushion, fabric
+Top 5  score=0.4048
+  image    : /nvme-ssd2/wxc/Test/Task2/imgs/000000001584.jpg
+  caption  : A red double-decker bus with route number 15 to Aldwych is driving down a city street, with other buses and pedestrians visible in the background.
+  objects  : double-decker bus, people, buildings, trees, road, license plate, advertising banner, other buses
+You> 
+Bye～

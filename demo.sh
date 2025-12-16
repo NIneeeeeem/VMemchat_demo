@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 python demo.py --vlm_path /ssd1/wxc/weights/Qwen3-VL-8B-Instruct --embed_path /ssd1/wxc/weights/Qwen3-Embedding-0.6B --visual_embed_path /ssd1/wxc/weights/dinov2-large
