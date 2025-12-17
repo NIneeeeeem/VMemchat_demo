@@ -1,3 +1,4 @@
+from curses import is_term_resized
 import os
 from typing import Any, Dict, List, Optional, Tuple
 import argparse
@@ -120,16 +121,26 @@ class QwenVLMemoryChatbot:
             )
             print("Rewrite Query: ", final_query)
 
-        results = self.memory.search_by_text(final_query, top_k=top_k)
+        image_results = self.memory.search_by_text(final_query, top_k=top_k)
+        item_results = self.memory.search_by_text(final_query, top_k=top_k, search_level = "item")
+        # TODO: 判定逻辑
         return {
             "final_query": final_query,
-            "results": [
+            "image_results": [
                 {
                     "item": item,
                     "score": score,
                 }
-                for item, score in results
+                for item, score in image_results
             ],
+            "item_results": [
+                {
+                    "item": item,
+                    "score": score,
+                }
+                for item, score in item_results
+            ]
+            
         }
 
     # Task 4. 图像检索
@@ -264,7 +275,14 @@ def print_search_results(result_dict: Dict[str, Any]) -> None:
             print(f"Top {rank}  score={score:.4f}")
             print(f"  image    : {item.image_path}")
             print(f"  caption  : {item.caption}")
-            print(f"  objects  : {', '.join(item.key_objects)}")
+            if isinstance(item.key_objects, list):
+                objects_str = ", ".join(item.key_objects)
+            elif isinstance(item.key_objects, str):
+                objects_str = item.key_objects
+            else:
+                objects_str = str(item.key_objects)
+
+            print(f"objects: {objects_str}")
             note = item.extra.get("user_note", "")
             if note:
                 print(f"  user_note: {note}")
@@ -273,20 +291,27 @@ def print_search_results(result_dict: Dict[str, Any]) -> None:
         print(f"[base_query ] {result_dict['base_query']}")
     print(f"[final_query] {result_dict['final_query']}")
     print("-" * 60)
-    results = result_dict.get("results", [])
+    image_results = result_dict.get("image_results", [])
+    item_results = result_dict.get("item_results", [])
     language_results = result_dict.get("language_results", [])
     visual_results = result_dict.get("visual_results", [])
-    if not results and not visual_results and not language_results:
+    if not item_results and not visual_results and not language_results and not image_results:
         print("未检索到任何结果")
         return
-    if results:
-        show_rank(results)
+    if image_results:
+        show_rank(image_results)
+        print("="*30)
+    if item_results:
+        show_rank(item_results)
+        print("="*30)
     if visual_results:
         print("Visual_results")
         show_rank(visual_results)
+        print("="*30)
     if language_results:
         print("Language_results")
         show_rank(language_results)
+        print("="*30)
 
 
 def main(args):

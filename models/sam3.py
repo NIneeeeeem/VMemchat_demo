@@ -1,0 +1,1 @@
+# TODO: SAM3 切分 image 中 item -> visual feature
